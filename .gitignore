@@ -1,0 +1,5 @@
+c/.idea
+*.o
+*/.idea
+*.class
+.idea
