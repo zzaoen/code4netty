@@ -22,13 +22,13 @@ public class ServerHandler extends ChannelInboundHandlerAdapter {
         //在这里，直接写一个TimeObject是不行的，因为需要编码成ByteBuf才可以，所以增加一个handler，用来编码
         final ChannelFuture future = ctx.writeAndFlush(new TimeObject());
 
-        future.addListener(new ChannelFutureListener() {
+        /*future.addListener(new ChannelFutureListener() {
             @Override
             public void operationComplete(ChannelFuture future) throws Exception {
                 assert future == future;
                 ctx.close();
             }
-        });
+        });*/
 
         /*final ByteBuf time = ctx.alloc().buffer(4);
 
