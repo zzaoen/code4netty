@@ -22,7 +22,7 @@ public class EchoServer {
 
     public static void main(String[] args) throws InterruptedException {
 
-        int port = 8888;
+        int port = 12345;
         new EchoServer(port).start();
         //return;
     }

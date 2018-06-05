@@ -1,10 +1,12 @@
 package Demo;
 
 import io.netty.buffer.ByteBuf;
+import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelFutureListener;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
+import io.netty.util.CharsetUtil;
 import io.netty.util.ReferenceCountUtil;
 
 /**
@@ -22,13 +24,19 @@ public class ServerHandler extends ChannelInboundHandlerAdapter {
         //在这里，直接写一个TimeObject是不行的，因为需要编码成ByteBuf才可以，所以增加一个handler，用来编码
         final ChannelFuture future = ctx.writeAndFlush(new TimeObject());
 
+<<<<<<< HEAD:src/main/java/Demo/ServerHandler.java
         /*future.addListener(new ChannelFutureListener() {
             @Override
+=======
+        future.addListener(new ChannelFutureListener() {
+>>>>>>> 1fa0b40e1b76a45fef917479c423897ebb125b20:src/main/java/Demo/ServerHandler.java
             public void operationComplete(ChannelFuture future) throws Exception {
                 assert future == future;
-                ctx.close();
+//                ctx.close();
             }
         });*/
+
+
 
         /*final ByteBuf time = ctx.alloc().buffer(4);
 

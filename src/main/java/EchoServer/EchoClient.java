@@ -28,7 +28,7 @@ public class EchoClient {
 
     public static void main(String[] args) throws InterruptedException {
         String host = "127.0.0.1";
-        int port = 8888;
+        int port = 12345;
         new EchoClient(host, port).start();
         return;
     }

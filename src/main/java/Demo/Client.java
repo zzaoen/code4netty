@@ -20,7 +20,7 @@ public class Client {
 
     public static void main(String[] args) throws InterruptedException {
 
-        new Client().run("127.0.0.1",8080);
+        new Client().run("127. 0.0.1",8080);
         return;
     }
 
